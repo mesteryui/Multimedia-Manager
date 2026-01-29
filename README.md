@@ -35,3 +35,4 @@ uvicorn app.main:app --reload
 La API estará disponible en `http://localhost:8000`.
 Documentación automática en `http://localhost:8000/docs`.
 
+Aqui hubo un asunto con el repositorio lo que obligo a empezar de cero
