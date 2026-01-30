@@ -5,7 +5,7 @@ Sistema de gestión multimedia (Series, Libros, Películas) con arquitectura bac
 ## Estructura
 
 - `backend/`: API REST construida con **FastAPI** y **SQLModel**.
-- `frontend/web_simple/`: Cliente web básico (HTML/JS).
+- `frontend/web_simple/`: Cliente web básico (HTML/JS) o en otras interfaces.
 - `docker-compose.yml`: Base de datos **PostgreSQL**.
 
 ## Inicio Rápido
@@ -35,4 +35,4 @@ uvicorn app.main:app --reload
 La API estará disponible en `http://localhost:8000`.
 Documentación automática en `http://localhost:8000/docs`.
 
-Aqui hubo un asunto con el repositorio lo que obligo a empezar de cero
+Aqui hubo un asunto con el repositorio lo que obligo a empezar de cero el repositorio

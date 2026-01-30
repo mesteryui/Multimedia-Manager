@@ -47,6 +47,11 @@ def listar_libro_por_id(id: int, session: Session = Depends(get_session)):
     return session.get(Libro, id)
 
 
+@app.get("/books/libro_por_titulo/{titulo}")
+def listar_libro_por_titulo(titulo: str, session: Session = Depends(get_session)):
+    return session.exec(select(Libro).where(Libro.titulo == titulo)).all()
+
+
 @app.post("/books/addLibro")
 def add_libro(libro: Libro, session: Session = Depends(get_session)):
     session.add(libro)
@@ -59,3 +64,10 @@ def delete_book_by_id(id: int, session: Session = Depends(get_session)):
     session.delete(session.get(Libro, id))
     session.commit()
     return {"message": "Libro eliminado correctamente"}
+
+
+@app.post("/movies/addMovie")
+def add_movie(movie: Pelicula, session: Session = Depends(get_session)):
+    session.add(movie)
+    session.commit()
+    return {"message": "Pelicula agregada correctamente"}
